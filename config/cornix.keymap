@@ -136,7 +136,21 @@
 
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        capslock {
+            bindings = <&kp CAPS>;
+            key-positions = <38 49>;
+            layers = <0>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <22 23>;
+            layers = <0>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -152,10 +166,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mt ESCAPE TAB    &kp Q         &kp W     &kp E             &kp R                &kp T                            &kp Y        &kp U                &kp I                &kp O     &kp P          &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A         &kp S     &hm_l D LEFT_ALT  &hm_shift_l LSHFT F  &kp G                            &kp H        &hm_shift_r RSHFT J  &kp K                &kp L     &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT    &kp Z         &kp X     &kp C             &kp V                &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M                &kp COMMA            &kp DOT   &kp FSLH       &kp UP_ARROW
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LALT  &kp LEFT_WIN      &lt 1 TAB            &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT      &lt 4 RIGHT_CONTROL  &kp LEFT  &kt DOWN       &kp RIGHT
+&mt ESCAPE TAB    &kp Q  &kp W  &kp E             &kp R                &kp T                            &kp Y        &kp U                &kp I                &kp O    &kp P          &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A  &kp S  &hm_l D LEFT_ALT  &hm_shift_l LSHFT F  &kp G                            &kp H        &hm_shift_r RSHFT J  &kp K                &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C             &kp V                &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M                &kp COMMA            &kp DOT  &kp FSLH       &none
+&none             &none  &none  &kp LEFT_WIN      &lt 1 TAB            &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT      &lt 4 RIGHT_CONTROL  &none    &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -195,6 +209,20 @@
 &bt BT_SEL 1  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans     &trans     &trans    &trans    &trans
 &bt BT_SEL 2  &trans  &trans   &trans   &trans   &trans                  &trans  &trans     &trans     &trans    &trans    &trans
             >;
+        };
+
+        No-homeRowMod {
+            display-name = "Base";
+            bindings = <
+&mt ESCAPE TAB    &kp Q  &kp W  &kp E         &kp R      &kp T                            &kp Y        &kp U            &kp I                &kp O    &kp P          &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F      &kp G                            &kp H        &kp J            &kp K                &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V      &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M            &kp COMMA            &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
+&none             &none  &none  &kp LEFT_WIN  &lt 1 TAB  &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT  &lt 4 RIGHT_CONTROL  &none    &none          &none
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_UP C_VOL_DN>,
+                <&inc_dec_kp PG_UP PG_DN>;
         };
     };
 };
