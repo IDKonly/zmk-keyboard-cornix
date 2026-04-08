@@ -142,13 +142,18 @@
         capslock {
             bindings = <&kp CAPS>;
             key-positions = <38 49>;
-            layers = <0>;
+            layers = <0 5>;
         };
 
         backslash {
             bindings = <&kp BACKSLASH>;
             key-positions = <22 23>;
-            layers = <0>;
+            layers = <0 5>;
+        };
+
+        Togle-NoHomeRowMod {
+            bindings = <&tog 5>;
+            key-positions = <49 48 47>;
         };
     };
 
@@ -166,10 +171,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mt ESCAPE TAB    &kp Q  &kp W  &kp E             &kp R                &kp T                            &kp Y        &kp U                &kp I                &kp O    &kp P          &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A  &kp S  &hm_l D LEFT_ALT  &hm_shift_l LSHFT F  &kp G                            &kp H        &hm_shift_r RSHFT J  &kp K                &kp L    &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C             &kp V                &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M                &kp COMMA            &kp DOT  &kp FSLH       &none
-&none             &none  &none  &kp LEFT_WIN      &lt 1 TAB            &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT      &lt 4 RIGHT_CONTROL  &none    &none          &none
+&mt ESCAPE TAB    &kp Q  &kp W       &kp E             &kp R                &kp T                            &kp Y        &kp U                &kp I                &kp O    &kp P          &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A  &kp S       &hm_l D LEFT_ALT  &hm_shift_l LSHFT F  &kp G                            &kp H        &hm_shift_r RSHFT J  &kp K                &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X       &kp C             &kp V                &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M                &kp COMMA            &kp DOT  &kp FSLH       &none
+&none             &none  &kp DELETE  &kp LEFT_WIN      &lt 1 TAB            &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT      &lt 4 RIGHT_CONTROL  &none    &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -177,10 +182,10 @@
 
         Nav_layer {
             bindings = <
-&trans          &kp PRINTSCREEN  &trans  &trans  &trans  &trans                  &trans    &kp PAGE_DOWN  &kp PG_UP     &kp HOME   &kp END  &trans
-&caps_word      &trans           &trans  &trans  &trans  &trans                  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans   &trans
-&kp LEFT_SHIFT  &trans           &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans         &trans        &trans     &trans   &trans
-&trans          &trans           &trans  &trans  &trans  &trans                  &trans    &trans         &trans        &trans     &trans   &trans
+&trans          &kp PRINTSCREEN  &trans  &trans  &kp LA(F4)  &trans                  &trans    &kp PAGE_DOWN  &kp PG_UP     &kp HOME   &kp END  &trans
+&caps_word      &trans           &trans  &trans  &trans      &trans                  &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans   &trans
+&kp LEFT_SHIFT  &trans           &trans  &trans  &trans      &trans  &trans  &trans  &trans    &trans         &trans        &trans     &trans   &trans
+&trans          &trans           &trans  &trans  &trans      &trans                  &trans    &trans         &trans        &trans     &trans   &trans
             >;
         };
 
@@ -213,10 +218,10 @@
 
         No-homeRowMod {
             bindings = <
-&mt ESCAPE TAB    &kp Q  &kp W  &kp E         &kp R      &kp T                            &kp Y        &kp U            &kp I                &kp O    &kp P          &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A  &kp S  &kp D         &kp F      &kp G                            &kp H        &kp J            &kp K                &kp L    &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp X  &kp C         &kp V      &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M            &kp COMMA            &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
-&none             &none  &none  &kp LEFT_WIN  &lt 1 TAB  &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT  &lt 4 RIGHT_CONTROL  &none    &none          &none
+&mt ESCAPE TAB    &kp Q         &kp W         &kp E         &kp R      &kp T                            &kp Y        &kp U            &kp I                &kp O    &kp P          &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A         &kp S         &kp D         &kp F      &kp G                            &kp H        &kp J            &kp K                &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z         &kp X         &kp C         &kp V      &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M            &kp COMMA            &kp DOT  &kp FSLH       &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_WIN  &lt 1 TAB  &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT  &lt 4 RIGHT_CONTROL  &none    &none          &none
             >;
 
             sensor-bindings =
