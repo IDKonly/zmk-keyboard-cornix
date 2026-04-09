@@ -48,10 +48,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <200>;                // repeat on tap-into-hold
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <175>;                // repeat on tap-into-hold
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <KEYS_R KEYS_T 6 7 8 9 10 11 18 19 20 21 22 23 31 32 33 34 35 36 37 44 45 46 47 48 49>;
             hold-trigger-on-release;
         };
 
@@ -61,10 +61,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <KEYS_L KEYS_T 0 1 2 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 38 39 40 41 42 43 3>;
             hold-trigger-on-release;
         };
 
@@ -83,7 +83,7 @@
             tapping-term-ms = <HM_TAPPING_TERM_FAST>;
             quick-tap-ms = <200>;
             require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_R KEYS_T>;
+            hold-trigger-key-positions = <KEYS_R KEYS_T 6 7 8 9 10 11 18 19 20 21 22 23 31 32 33 34 35 36 37 44 45 46 47 48 49>;
             hold-trigger-on-release;
         };
 
@@ -93,10 +93,10 @@
             bindings = <&kp>, <&kp>;
 
             flavor = "balanced";
-            tapping-term-ms = <HM_TAPPING_TERM_FAST>;
-            quick-tap-ms = <200>;
-            require-prior-idle-ms = <HM_PRIOR_IDLE>;
-            hold-trigger-key-positions = <KEYS_L KEYS_T>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <175>;
+            require-prior-idle-ms = <125>;
+            hold-trigger-key-positions = <KEYS_L KEYS_T 0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 30 38 39 40 41 42 43>;
 
             // for quick tapping; shift+~
 
@@ -171,10 +171,10 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&mt ESCAPE TAB    &kp Q  &kp W       &kp E             &kp R                &kp T                            &kp Y        &kp U                &kp I                &kp O    &kp P          &kp BACKSPACE
-&kp LEFT_CONTROL  &kp A  &kp S       &hm_l LEFT_ALT D  &hm_shift_l LSHFT F  &kp G                            &kp H        &hm_shift_r RSHFT J  &kp K                &kp L    &kp SEMICOLON  &kp SQT
-&kp LEFT_SHIFT    &kp Z  &kp X       &kp C             &kp V                &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M                &kp COMMA            &kp DOT  &kp FSLH       &none
-&none             &none  &kp DELETE  &kp LEFT_WIN      &lt 1 TAB            &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT      &lt 4 RIGHT_CONTROL  &none    &none          &none
+&mt ESCAPE TAB    &kp Q  &kp W       &kp E           &kp R                &kp T                            &kp Y        &kp U                &kp I                &kp O    &kp P          &kp BACKSPACE
+&kp LEFT_CONTROL  &kp A  &kp S       &hm LEFT_ALT D  &hm_shift_l LSHFT F  &kp G                            &kp H        &hm_shift_r RSHFT J  &kp K                &kp L    &kp SEMICOLON  &kp SQT
+&kp LEFT_SHIFT    &kp Z  &kp X       &kp C           &kp V                &kp B      &kt K_MUTE  &mkp MB3  &kp N        &kp M                &kp COMMA            &kp DOT  &kp FSLH       &none
+&none             &none  &kp DELETE  &kp LEFT_WIN    &lt 1 LEFT_ALT       &kp SPACE                        &lt 2 ENTER  &lt 3 RIGHT_ALT      &lt 4 RIGHT_CONTROL  &none    &none          &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
