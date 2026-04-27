@@ -101,8 +101,6 @@
 
             flavor = "hold-preferred";
             tapping-term-ms = <180>;
-            quick-tap-ms = <175>;
-            require-prior-idle-ms = <125>;
         };
     };
 
