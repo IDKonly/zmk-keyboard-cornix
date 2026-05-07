@@ -99,7 +99,7 @@
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
 
-            flavor = "hold-preferred";
+            flavor = "balanced";
             tapping-term-ms = <180>;
         };
     };
