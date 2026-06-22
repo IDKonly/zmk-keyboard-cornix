@@ -219,3 +219,22 @@
         };
     };
 };
+
+&spi3 {
+    status = "okay";
+
+    led_strip: ws2812@0 {
+        status = "okay";
+    };
+};
+
+/ {
+    aliases {
+        status-ws2812 = &led_strip;
+    };
+
+    chosen {
+        zmk,underglow = &led_strip;
+        widget,rgb = &led_strip;
+    };
+};
